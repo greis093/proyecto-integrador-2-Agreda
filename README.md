@@ -4,7 +4,9 @@
 
 # Netlify :
 
-## CREAR UN PROyECTO
+## Pasos para crear un proyecto en REACT
+
+### CREAR UN PROyECTO
 
 npm create vite@latest ./ -- --template react
 
