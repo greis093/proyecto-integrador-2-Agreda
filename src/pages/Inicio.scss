@@ -1,0 +1,39 @@
+.section-cards{
+    background-color: #f1f2f3;
+    padding: 1rem;
+}
+.cards-container{ 
+    /*Si lo realizo por flexbox */
+    /*display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;*/
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;  /*Espacio entre elementos*/
+
+    @media screen and (min-width: 576px){
+        &{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px 25px 20px 25px;  /*Espacio entre elementos*/
+        }
+    }
+
+    @media screen and (min-width: 992px){
+        &{
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 20px 25px 20px 25px;  /*Espacio entre elementos*/
+        }
+    }
+
+    @media screen and (min-width: 1200px){
+        &{
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 20px 25px 20px 25px;  /*Espacio entre elementos*/
+        }
+    }
+}

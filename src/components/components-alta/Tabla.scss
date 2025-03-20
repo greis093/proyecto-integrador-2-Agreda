@@ -1,0 +1,16 @@
+.tabla-alta{
+    border-collapse: collapse;
+    width: 95%;
+    margin: 1rem auto;
+    border-radius: 10px;
+    th,td{
+        border-bottom:1px  black dashed;
+       
+        padding: 8px;
+        text-align: center;
+    }
+}
+.cabecera{
+    background-color: rgba(114, 179, 183, 0.455);
+
+}
