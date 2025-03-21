@@ -3,29 +3,28 @@
     text-align: center;
     font-weight: 600;
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
     font-size: 1.5rem;
     line-height: 2rem;
 }
 .formu{
-    margin-bottom: 1rem;
     justify-self: center;
+    background-color: rgba(250, 215, 215, 0.499);
+    border: dotted;
+    border-radius: 15px;
 }
 
 .formulario{
     width: 30vw;
-    border: 20px;
-    border-color: black;
-    border-radius: 0.5rem;
-    margin-bottom: 0.5rem;	
-      
+    margin: 0.5rem;
+   	&__fila{
+        padding-top: 10px;
+    }
     &__datos{  
         font-size: 20px;
     }
     &__input{
         width: 100%;
         padding: 0.5rem;
-        margin-bottom: 1rem;
         border-radius: 0.5rem;
         cursor: pointer;
         &:focus{
@@ -34,7 +33,7 @@
         }
         &:hover {
             font-size: 16px;
-            background-color:  #ff575749;
+            background-color:  #57ff6211;
         } 
     }
 
@@ -70,10 +69,14 @@
         } 
     }
      &__check{
-        margin-left: 10px;
+        margin: 0px 15px 10px 2px;
         height:25px;
         width:25px;
         cursor: pointer;
+     }
+
+     &__check-categoria{
+        padding: 0px 0px 10px 2px;
      }
 }
 .botones{

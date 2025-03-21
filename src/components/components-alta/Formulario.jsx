@@ -1,7 +1,7 @@
 import './Formulario.scss'
 import { useContext, useEffect, useState } from "react"
 import ProductosContext from "../../contexts/ProductosContext"
-
+import Swal from "sweetalert2";
 
 const Formulario = () => {
     const {crearProdutoContext, 
@@ -14,7 +14,11 @@ const Formulario = () => {
       precio:'',
       precio_antiguo:'',
       stock:'',
-      categoria:'',
+      categoria:[],
+        love:false,
+        box:false,
+        bouquet:false,
+        graduacion:false,
       detalles:'',
       foto:'',
       envio:false
@@ -24,18 +28,44 @@ const Formulario = () => {
   ),[productoAEditar])
       const [form, setForm] = useState(formInicial)
 
+
       const handleSubmit =(e)=>{
         e.preventDefault()
         if (form.id === null){
+          
             crearProdutoContext(form)
+            Swal.fire({
+              title: "Creado!",
+              text: "El producto se creo",
+               icon: "success"
+            });
+            
         } else{
             actualizarProductoContext(form)
+            Swal.fire({
+                      title: "Actualizado!",
+                      text: "El producto se actualizo",
+                       icon: "success"
+                    });
+
         }
+
+        
+        setProductoAEditar(formInicial)
+       
       }
 
       const handleChange =(e) =>{
-          //console.dir(e.target)
+          
           const { type, name, checked, value} = e.target
+          if(type === "checkbox" && checked && name!="envio" ){
+            form.categoria.push(name);
+          } 
+          
+          if (type === "checkbox"  && !checked  ){
+            form.categoria = form.categoria.filter((i) => i !== name);
+          }
+
           //debugger
           setForm({
             ...form,
@@ -44,12 +74,11 @@ const Formulario = () => {
       }
 
       const handleReset =()=>{
-          setForm(formInicial)
           setProductoAEditar(null)
       }
   return (
     <>
-      <h2 className="titulo_formulario"> Agregar : Editar</h2>
+      <h2 className="titulo_formulario">Formulario de { productoAEditar ? 'edición' : 'carga'} de productos</h2>
         <div className="formu">
       <form className="formulario" onSubmit={handleSubmit}>
         <div className="formulario__fila">
@@ -85,12 +114,31 @@ const Formulario = () => {
             onChange={handleChange}/>
         </div>
         <div className="formulario__fila">
-            <label className='formulario__datos' htmlFor="lbl-categoria">Categoria</label>
-            <input className='formulario__input' type="text" 
-            id="lbl-categoria" 
-            name="categoria" 
-            value={form.categoria} 
-            onChange={handleChange}/>
+            <label className='formulario__datos' htmlFor="lbl-categoria">Categoria </label>
+            <em className='formulario__check-categoria'>love</em>
+            <input className='formulario__check' type="checkbox" 
+            id="lbl-categoria-love" 
+             name="love"
+             checked={form.love}
+            onChange={handleChange} />
+            <em className='formulario__check-categoria'>box</em>
+            <input className='formulario__check' type="checkbox" 
+            id="lbl-categoria-box" 
+             name="box"
+             checked={form.box}
+            onChange={handleChange} />
+            <em className='formulario__check-categoria'>bouquet</em>
+            <input className='formulario__check' type="checkbox" 
+            id="lbl-categoria-bouquet" 
+             name="bouquet"
+             checked={form.bouquet}
+            onChange={handleChange}  />
+            <em className='formulario__check-categoria'>graduación</em>
+            <input className='formulario__check' type="checkbox" 
+            id="lbl-categoria-graduacion" 
+             name="graduacion"
+             checked={form.graduacion}
+            onChange={handleChange} />
         </div>
         <div className="formulario__fila">
             <label className='formulario__datos' htmlFor="lbl-detalle">Detalles</label>
@@ -106,9 +154,10 @@ const Formulario = () => {
             id="lbl-foto" 
             name="foto" 
             value={form.foto} 
+            
             onChange={handleChange}/>
         </div>
-        <div>
+        <div className="formulario__fila">
             <label className='formulario__datos' htmlFor="lbl-envio">Envio</label>
             <input className='formulario__check' type="checkbox" 
             id="lbl-envio" 
@@ -117,7 +166,7 @@ const Formulario = () => {
             onChange={handleChange}/>
         </div>
         <div className='botones'>
-        <button  className="formulario__submit" type="submit" onClick={handleSubmit}>Guardar : Editar</button>
+        <button  className="formulario__submit" type="submit" onClick={handleSubmit}>{ productoAEditar ? 'Editar' : 'Crear' }</button>
         <button className="formulario__reset" type="reset" onClick={handleReset}>Limpiar</button>
         </div>
       </form>

@@ -2,10 +2,10 @@ import { useContext } from "react"
 import ProductosContext from "../../contexts/ProductosContext"
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
-
+import './TablaFila.scss'
 
 const TablaFila = ({producto}) => {
-  const {eliminarProductoContext,setProdutoAEditar} =useContext(ProductosContext)
+  const {eliminarProductoContext,setProductoAEditar} =useContext(ProductosContext)
   const navigate = useNavigate()
   const handleEliminar =(id)=>{
     //lógica de Sweet Alert
@@ -37,7 +37,7 @@ const TablaFila = ({producto}) => {
   }
   
   const handleEditar = (producto) =>{
-    setProdutoAEditar(producto)
+    setProductoAEditar(producto)
   }
 
   const handleVer = (id) => {
@@ -50,15 +50,16 @@ const TablaFila = ({producto}) => {
       <td>{producto.precio}</td>
       <td>{producto.precio_antiguo}</td>
       <td>{producto.stock}</td>
-      <td>{producto.categoria}</td>
+      <td >
+         {producto.categoria.map((c)=>(<span className="categoria_span">{ c }</span>))}</td>
       <td>
-        <img src={producto.foto} alt={producto.nombre} style={{width:'40px'}}/>
+        <img className= "imagen_tabla" src={producto.foto} alt={producto.nombre} style={{width:'40px'}}/>
       </td>
       <td>{producto.envio ? 'si' : 'no'}</td>
       <td>
-        <button  onClick={() => handleVer(producto.id)}>Ver</button>
-        <button onClick={()=>handleEditar(producto)}>Editar</button>
-        <button onClick={()=>handleEliminar(producto.id)}>Borrar</button>
+        <button className="boton__ver" onClick={() => handleVer(producto.id)}>Ver</button>
+        <button className="boton__editar" onClick={()=>handleEditar(producto)}>Editar</button>
+        <button className="boton__borrar" onClick={()=>handleEliminar(producto.id)}>Borrar</button>
       </td>
     </tr>
   )

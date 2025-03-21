@@ -1,17 +1,39 @@
 {
   "productos": [
     {
+      "id": "1",
+      "nombre": "Caja de 6 rosas premium",
+      "stock": "20",
+      "foto": "/public/imgs/caja_6_rosas_premium.webp",
+      "precio": "S/49,00",
+      "precio_antiguo": " S/59,00",
+      "detalles": "Caja con 6 rosas + tarjeta con dedicatoria",
+      "categoria": [
+        "bouquet",
+        "graduacion"
+      ],
+      "love": false,
+      "box": false,
+      "bouquet": true,
+      "graduacion": true,
+      "envio": false
+    },
+    {
       "id": "2",
       "nombre": "Ramo de tulipanes premium",
       "stock": 4,
       "foto": "/public/imgs/tulipanes_colores_premium.webp",
-      "precio": "S/59,00",
+      "precio": "S/69,00",
       "precio_antiguo": " S/79,00",
       "detalles": "Ramo de 3 Tulipanes + tarjeta con dedicatoria.",
       "categoria": [
-        "love",
-        "bouquet"
-      ]
+        "graduacion",
+        "love"
+      ],
+      "bouquet": false,
+      "box": false,
+      "love": true,
+      "graduacion": true
     },
     {
       "id": "3",
@@ -23,8 +45,11 @@
       "detalles": "Ramo de 10 girasoles + tarjeta con dedicatoria.",
       "categoria": [
         "love",
-        "bouquet"
-      ]
+        "bouquet",
+        "box"
+      ],
+      "box": true,
+      "graduacion": false
     },
     {
       "id": "4",
@@ -37,7 +62,9 @@
       "categoria": [
         "love",
         "bouquet"
-      ]
+      ],
+      "box": false,
+      "graduacion": false
     },
     {
       "id": "5",
@@ -48,9 +75,11 @@
       "precio_antiguo": " S/249,00",
       "detalles": "Esta acompañado de un adorable oso de peluche + topper 'Happy San Valentin.",
       "categoria": [
-        "graduation",
-        "box"
-      ]
+        "love",
+        "bouquet"
+      ],
+      "love": true,
+      "bouquet": true
     },
     {
       "id": "6",
@@ -61,9 +90,12 @@
       "precio_antiguo": " S/249,00",
       "detalles": "Ramo de 12 Rosas + tarjeta con dedicatoria acompañado de un adorable oso de peluche + topper 'Happy San Valentin.",
       "categoria": [
-        "love",
-        "box"
-      ]
+        "box",
+        "love"
+      ],
+      "bouquet": false,
+      "box": true,
+      "love": true
     },
     {
       "id": "7",
@@ -75,9 +107,10 @@
       "precio_antiguo": " S/129,00",
       "detalles": "Ramo con 12 rosas y follaje verde + tarjeta con dedicatoria.",
       "categoria": [
-        "love",
-        "bouquet"
-      ]
+        "bouquet",
+        "love"
+      ],
+      "bouque": true
     },
     {
       "id": "8",
@@ -89,8 +122,61 @@
       "detalles": "Box de 10 rosas + 20 fresas con toppings acompañado de un Riccadonna +  en base de lata resistente y duradera.",
       "categoria": [
         "love",
+        "bouquet"
+      ],
+      "bouque": true
+    },
+    {
+      "id": "d649",
+      "nombre": "fghhg",
+      "precio": "rt",
+      "precio_antiguo": "rrt",
+      "stock": "ert",
+      "categoria": [],
+      "detalles": "trt",
+      "foto": ""
+    },
+    {
+      "id": "9a4b",
+      "nombre": "ffffffffffddddddddds",
+      "precio": "fdffd",
+      "precio_antiguo": "fddffd",
+      "stock": "fdf",
+      "categoria": [],
+      "detalles": "dfd",
+      "foto": "",
+      "envio": false,
+      "love ": true
+    },
+    {
+      "id": "0c4c",
+      "nombre": "Carlos",
+      "precio": "120",
+      "precio_antiguo": "120",
+      "stock": "33",
+      "categoria": [
+        "bouquet"
+      ],
+      "detalles": "dedededede",
+      "foto": "",
+      "envio": true,
+      "bouquet": true
+    },
+    {
+      "id": "aa37",
+      "nombre": "",
+      "precio": "",
+      "precio_antiguo": "",
+      "stock": "",
+      "categoria": [
+        "love",
         "box"
-      ]
+      ],
+      "detalles": "",
+      "foto": "",
+      "envio": false,
+      "love": true,
+      "box": true
     }
   ]
 }
