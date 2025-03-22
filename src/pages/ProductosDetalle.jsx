@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
 import Spinner from "../components/spinner/Spinner"
-
+import './ProductosDetalle.scss'
 
 const ProductosDetalle = () => {
 
@@ -44,20 +44,26 @@ const ProductosDetalle = () => {
 
   return (
     <>
-      <h1>Producto detalle</h1>
+    <div className="section-titulo">
+    <h1>Producto detalle</h1>
+    </div>
 
       {
         productoDetalle ? 
           (
             <>
-              <p>El nombre del producto: {productoDetalle.nombre}</p>
-              <p> El stock del producto es: {productoDetalle.stock}</p>
-              <p>El precio: {productoDetalle.precio}</p>
-              <p>El precio antiguo: {productoDetalle.precio_antiguo}</p>
-              <p>El detalle del producto: {productoDetalle.detalles}</p>
-             <p>La foto del producto:</p>
-             <img src={productoDetalle.foto} alt={productoDetalle.nombre} style={{width:'260px'}}/>
-
+           
+            <p className="detalle_producto">El nombre del producto:</p> <div className="producto">{productoDetalle.nombre}</div>
+              <p className="detalle_producto"> El stock del producto es:</p> <div className="producto">{productoDetalle.stock}</div>
+              <p className="detalle_producto">El precio:</p> <div className="producto">{"S/"}{productoDetalle.precio}</div>
+              <p className="detalle_producto">El precio antiguo:</p> <div className="producto">{"S/"}{productoDetalle.precio_antiguo}</div>
+              <p className="detalle_producto">El detalle del producto:</p><div className="producto"> {productoDetalle.detalles}</div>
+              <p className="detalle_producto">La categoria del producto:</p><div className="producto"> {productoDetalle.categoria.map((c)=>(<span className="categoria_span">{ c }</span>))}</div>
+             <p className="detalle_producto"> La foto del producto:</p>
+             <div className="contenedor_imagen">
+             <img className="imagen_producto" src={productoDetalle.foto} alt={productoDetalle.nombre}/>
+             </div>
+    
             </>
           ) :
           (

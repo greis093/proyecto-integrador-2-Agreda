@@ -1,16 +1,68 @@
-.tabla-alta{
-    border-collapse: collapse;
-    width: 95%;
-    margin: 1rem auto;
-    border-radius: 10px;
-    th,td{
-        border-bottom:1px  black dashed;
-       
-        padding: 8px;
+.container_tabla{
+    margin: 10px;
+    width: 100%;
+}
+    // Scroll personalizado
+.container_tabla::-webkit-scrollbar {
+    height: 10px;
+  }
+.container_tabla::-webkit-scrollbar-thumb {
+    background: #3ae32ee1;
+    border-radius: 5px;
+  }
+  
+.container_tabla::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .categoria_span{
+    padding: 5px;
+  }
+    .tabla-alta{    
+        border-collapse: collapse;
+       th,td{
+        padding: 5px;
         text-align: center;
+        border: rgba(146, 144, 144, 0.188);
+        border-style: dashed;
+       }
+       th {
+        background: rgba(146, 144, 144, 0.188);
+      } 
+   
+   }
+   .cabecera_tabla{
+  
+    border-radius: 10px;
+    width: 100%; // Ocupar todo el ancho disponible
+    background-color: rgba(114, 179, 183, 0.455);
+    border-width: 2px;
+       
+   }
+   .cuerpo_tabla{
+    margin: 1rem auto;
+   }
+
+@media screen and (min-width: 992px){
+    .tabla-alta{
+        width:100%;
+        margin: 1rem auto;
+       
+        th,td{
+            border-bottom:1px  black dashed;
+           
+            padding: 8px;
+        }
     }
 }
-.cabecera{
-    background-color: rgba(114, 179, 183, 0.455);
 
+@media screen and (min-width:1200px){
+    .tabla-alta{
+        width:100%;
+        margin: 1rem auto;
+       
+        th,td{
+            border-bottom:1px  black dashed;
+            padding: 8px;
+        }
+    }
 }

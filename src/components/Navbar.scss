@@ -40,11 +40,12 @@
                     justify-content: space-evenly; 
         } 
         &__nav-link {
-            border-radius: 20px;        
+            border-radius: 20px; 
+            padding: 1rem 2rem;       
             }
         &__nav-item { /* .nav-bar__nav-item */
         
-                        width: 20vw;
+                        width: 18vw;
                         font-size: 25px;
                         transition: width 2s, height 0s;
                         &:hover {

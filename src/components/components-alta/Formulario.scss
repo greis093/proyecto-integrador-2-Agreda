@@ -11,10 +11,11 @@
     background-color: rgba(250, 215, 215, 0.499);
     border: dotted;
     border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .formulario{
-    width: 30vw;
+    width: 85vw;
     margin: 0.5rem;
    	&__fila{
         padding-top: 10px;
@@ -24,6 +25,7 @@
     }
     &__input{
         width: 100%;
+        font-size: 18px;
         padding: 0.5rem;
         border-radius: 0.5rem;
         cursor: pointer;
@@ -48,9 +50,12 @@
         color: azure;
         font-size: 20px;
         cursor: pointer;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+
         &:hover {
-            background-color:rgb(33, 133, 33);;
-        } 
+        font-size: 26px;
+        box-shadow: 2px 8px 10px 5px rgba(139, 235, 75, 0.793);
+}
     }
 
     &__reset{
@@ -64,9 +69,12 @@
         color: azure;
         font-size: 20px;
         cursor: pointer;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+
         &:hover {
-            background-color:  #a73636f0;
-        } 
+         font-size: 26px;
+         box-shadow: 2px 8px 10px 5px rgba(205, 75, 50, 0.495);
+        }
     }
      &__check{
         margin: 0px 15px 10px 2px;
@@ -82,4 +90,21 @@
 .botones{
     display: flex;
     justify-content: space-between;
+}
+@media screen and (min-width:576px){
+    .formulario{
+        width: 60vw;
+    }
+}
+@media screen and (min-width: 992px){
+    
+    .formulario{
+        width: 40vw;
+    }    
+}
+
+@media screen and (min-width:1200px){
+    .formulario{
+        width: 30vw;
+    }
 }

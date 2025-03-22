@@ -31,6 +31,22 @@ const Formulario = () => {
 
       const handleSubmit =(e)=>{
         e.preventDefault()
+        if (!form.nombre || !form.precio || !form.precio_antiguo || !form.detalles || !form.stock ) {
+          Swal.fire({
+              title: "Error",
+              text: "Todos los campos obligatorios deben completarse",
+              icon: "error"
+          });
+          return;
+        }
+        if (!form.bouquet && !form.graduacion && !form.love && !form.box ){
+          Swal.fire({
+            title: "Error",
+            text: "Selecciona minimo 1 opción de Categoria",
+            icon: "error"
+        });
+        return;
+        }
         if (form.id === null){
           
             crearProdutoContext(form)
@@ -47,30 +63,27 @@ const Formulario = () => {
                       text: "El producto se actualizo",
                        icon: "success"
                     });
-
         }
-
         
-        setProductoAEditar(formInicial)
-       
+        setProductoAEditar(formInicial)   
       }
 
       const handleChange =(e) =>{
           
           const { type, name, checked, value} = e.target
-          if(type === "checkbox" && checked && name!="envio" ){
+        if (type === "checkbox" && checked && name !== "envio") {
             form.categoria.push(name);
-          } 
+        }
           
           if (type === "checkbox"  && !checked  ){
             form.categoria = form.categoria.filter((i) => i !== name);
           }
-
-          //debugger
-          setForm({
-            ...form,
-            [name]: type === 'checkbox' ? checked : value
-          })
+        
+            setForm({
+                ...form,
+                [name]: type === 'checkbox' ? checked : value
+            });
+        
       }
 
       const handleReset =()=>{
@@ -83,35 +96,37 @@ const Formulario = () => {
       <form className="formulario" onSubmit={handleSubmit}>
         <div className="formulario__fila">
             <label  className='formulario__datos'htmlFor="lbl-nombre">Nombre</label>
-            <input  className='formulario__input'type="text" 
+            <input className='formulario__input'type="text" 
             id="lbl-nombre" 
             name="nombre" 
             value={form.nombre} 
-            onChange={handleChange} />
+            onChange={handleChange} required/>
         </div>
         <div className="formulario__fila">
             <label className='formulario__datos' htmlFor="lbl-precio">Precio</label>
-            <input className='formulario__input' type="text" 
+            <input className='formulario__input' type="number" 
             id="lbl-precio" 
             name="precio" 
+           placeholder="S/"
             value={form.precio} 
-            onChange={handleChange}/>
+            onChange={handleChange} required/>
         </div>
         <div className="formulario__fila">
             <label className='formulario__datos' htmlFor="lbl-precio_antiguo">precio antiguo</label>
-            <input className='formulario__input' type="text" 
+            <input className='formulario__input' type="number" 
             id="lbl-precio_antiguo" 
             name="precio_antiguo" 
+           placeholder="S/"
             value={form.precio_antiguo} 
-            onChange={handleChange}/>
+            onChange={handleChange} required/>
         </div>
         <div className="formulario__fila">
             <label className='formulario__datos' htmlFor="lbl-stock">Stock</label>
-            <input className='formulario__input' type="text" 
+            <input className='formulario__input' type="number" 
             id="lbl-stock" 
             name="stock" 
             value={form.stock} 
-            onChange={handleChange}/>
+            onChange={handleChange} required/>
         </div>
         <div className="formulario__fila">
             <label className='formulario__datos' htmlFor="lbl-categoria">Categoria </label>
@@ -146,7 +161,7 @@ const Formulario = () => {
             id="lbl-detalle" 
             name="detalles" 
             value={form.detalles} 
-            onChange={handleChange}/>
+            onChange={handleChange} required/>
         </div >
         <div className="formulario__fila">
             <label className='formulario__datos' htmlFor="lbl-foto">Foto</label>
@@ -154,8 +169,7 @@ const Formulario = () => {
             id="lbl-foto" 
             name="foto" 
             value={form.foto} 
-            
-            onChange={handleChange}/>
+            onChange={handleChange} />
         </div>
         <div className="formulario__fila">
             <label className='formulario__datos' htmlFor="lbl-envio">Envio</label>

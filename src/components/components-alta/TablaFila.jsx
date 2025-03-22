@@ -47,16 +47,17 @@ const TablaFila = ({producto}) => {
   return (
     <tr>
       <td>{producto.nombre}</td>
-      <td>{producto.precio}</td>
-      <td>{producto.precio_antiguo}</td>
+      <td>{"S/"}{producto.precio}</td>
+      <td>{"S/"}{producto.precio_antiguo}</td>
       <td>{producto.stock}</td>
       <td >
-         {producto.categoria.map((c)=>(<span className="categoria_span">{ c }</span>))}</td>
+         {producto.categoria.map((c)=>(<span className="categoria_span">{ c }</span>))}
+      </td>
       <td>
-        <img className= "imagen_tabla" src={producto.foto} alt={producto.nombre} style={{width:'40px'}}/>
+        <img className= "imagen_tabla" src={producto.foto} alt={producto.nombre} />
       </td>
       <td>{producto.envio ? 'si' : 'no'}</td>
-      <td>
+      <td className="boton">
         <button className="boton__ver" onClick={() => handleVer(producto.id)}>Ver</button>
         <button className="boton__editar" onClick={()=>handleEditar(producto)}>Editar</button>
         <button className="boton__borrar" onClick={()=>handleEliminar(producto.id)}>Borrar</button>

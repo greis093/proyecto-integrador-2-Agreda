@@ -2,29 +2,34 @@ import TablaFila from "./TablaFila"
 import './Tabla.scss'
 import { useContext } from "react"
 import ProductosContext from "../../contexts/ProductosContext";
+
 const Tabla = () => {
     const { productos } = useContext(ProductosContext);
   return (
-    <table className="tabla-alta">
-      <thead className="cabecera">
-        <tr>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Precio antiguo</th>
-            <th>Stock</th>
-            <th>Categoría</th>
-            <th>Foto</th>
-            <th>Envío</th>
-            <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
+  
+       <div className="container_tabla" style={{overflow:"scroll"}}>
+        <table className="tabla-alta">
+          <thead className="cabecera_tabla">
+             <tr>
+                <th >Nombre</th>
+                <th>Precio</th>
+                <th>Precio antiguo</th>
+                <th>Stock</th>
+                <th>Categoría</th>
+                <th>Foto</th>
+                <th>Envío</th>
+                <th>Acciones</th>
+              </tr>
+          </thead>
+      <tbody className="cuerpo_tabla">
        { productos && productos.map((producto)=>(
         <TablaFila producto={producto} key={producto.id}/>
        ))
         }
       </tbody>
     </table>
+    </div>
+
   )
 }
 

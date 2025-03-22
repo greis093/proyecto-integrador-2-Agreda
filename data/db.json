@@ -3,10 +3,10 @@
     {
       "id": "1",
       "nombre": "Caja de 6 rosas premium",
-      "stock": "20",
+      "stock": "4",
       "foto": "/public/imgs/caja_6_rosas_premium.webp",
-      "precio": "S/49,00",
-      "precio_antiguo": " S/59,00",
+      "precio": "120",
+      "precio_antiguo": "400",
       "detalles": "Caja con 6 rosas + tarjeta con dedicatoria",
       "categoria": [
         "bouquet",
@@ -23,8 +23,8 @@
       "nombre": "Ramo de tulipanes premium",
       "stock": 4,
       "foto": "/public/imgs/tulipanes_colores_premium.webp",
-      "precio": "S/69,00",
-      "precio_antiguo": " S/79,00",
+      "precio": "69,00",
+      "precio_antiguo": "79,00",
       "detalles": "Ramo de 3 Tulipanes + tarjeta con dedicatoria.",
       "categoria": [
         "graduacion",
@@ -40,8 +40,8 @@
       "nombre": "Ramo de Girasoles",
       "stock": 6,
       "foto": "/public/imgs/ramos-girasoles.webp",
-      "precio": "S/159,00",
-      "precio_antiguo": " S/179,00",
+      "precio": "159,00",
+      "precio_antiguo": "179,00",
       "detalles": "Ramo de 10 girasoles + tarjeta con dedicatoria.",
       "categoria": [
         "love",
@@ -56,8 +56,8 @@
       "nombre": "Ramo de tulipanes multicolor Premium",
       "stock": 3,
       "foto": "/public/imgs/ramo_10_tulipanes.webp",
-      "precio": "S/139,00",
-      "precio_antiguo": " S/159,00",
+      "precio": "139,00",
+      "precio_antiguo": "159,00",
       "detalles": "Ramo de 10 Tulipanes + tarjeta con dedicatoria.",
       "categoria": [
         "love",
@@ -71,8 +71,8 @@
       "nombre": "Box Graduación Premium",
       "stock": 7,
       "foto": "/public/imgs/regalo-floral-de-graduacion.webp",
-      "precio": "S/229,00",
-      "precio_antiguo": " S/249,00",
+      "precio": "229,00",
+      "precio_antiguo": "249,00",
       "detalles": "Esta acompañado de un adorable oso de peluche + topper 'Happy San Valentin.",
       "categoria": [
         "love",
@@ -86,8 +86,8 @@
       "nombre": "Box San Valentin",
       "stock": 20,
       "foto": "/public/imgs/arreglo_floral_amor.webp",
-      "precio": "S/229,00",
-      "precio_antiguo": " S/249,00",
+      "precio": "229,00",
+      "precio_antiguo": "249,00",
       "detalles": "Ramo de 12 Rosas + tarjeta con dedicatoria acompañado de un adorable oso de peluche + topper 'Happy San Valentin.",
       "categoria": [
         "box",
@@ -103,8 +103,8 @@
       "stock": 3,
       "foto": "/public/imgs/ramo_premium_love.webp",
       "descripcion": "Construidos con una combinación de caqui  y abeto ",
-      "precio": "S/89,00",
-      "precio_antiguo": " S/129,00",
+      "precio": "89,00",
+      "precio_antiguo": "129,00",
       "detalles": "Ramo con 12 rosas y follaje verde + tarjeta con dedicatoria.",
       "categoria": [
         "bouquet",
@@ -117,36 +117,14 @@
       "nombre": "Box Chocofresas Premium",
       "stock": 2,
       "foto": "/public/imgs/caja_de_fresas_con_chocolate_y_licor.webp",
-      "precio": "S/189,00",
-      "precio_antiguo": " S/229,00",
+      "precio": "189,00",
+      "precio_antiguo": "229,00",
       "detalles": "Box de 10 rosas + 20 fresas con toppings acompañado de un Riccadonna +  en base de lata resistente y duradera.",
       "categoria": [
         "love",
         "bouquet"
       ],
       "bouque": true
-    },
-    {
-      "id": "d649",
-      "nombre": "fghhg",
-      "precio": "rt",
-      "precio_antiguo": "rrt",
-      "stock": "ert",
-      "categoria": [],
-      "detalles": "trt",
-      "foto": ""
-    },
-    {
-      "id": "9a4b",
-      "nombre": "ffffffffffddddddddds",
-      "precio": "fdffd",
-      "precio_antiguo": "fddffd",
-      "stock": "fdf",
-      "categoria": [],
-      "detalles": "dfd",
-      "foto": "",
-      "envio": false,
-      "love ": true
     },
     {
       "id": "0c4c",
@@ -163,20 +141,51 @@
       "bouquet": true
     },
     {
-      "id": "aa37",
-      "nombre": "",
-      "precio": "",
-      "precio_antiguo": "",
-      "stock": "",
-      "categoria": [
-        "love",
-        "box"
-      ],
-      "detalles": "",
+      "id": "5d85",
+      "nombre": "Yirley Greicy",
+      "precio": "S/",
+      "precio_antiguo": "200",
+      "stock": "234",
+      "categoria": [],
+      "love": false,
+      "box": false,
+      "bouquet": false,
+      "graduacion": false,
+      "detalles": "rosas cortecia",
       "foto": "",
-      "envio": false,
+      "envio": false
+    },
+    {
+      "id": "aaca",
+      "nombre": "Greicy",
+      "precio": "120",
+      "precio_antiguo": "500",
+      "stock": "234",
+      "categoria": [
+        "love"
+      ],
       "love": true,
-      "box": true
+      "box": false,
+      "bouquet": false,
+      "graduacion": false,
+      "detalles": "grfs",
+      "foto": "",
+      "envio": false
+    },
+    {
+      "id": "cc0b",
+      "nombre": "Greicy",
+      "precio": "120",
+      "precio_antiguo": "500",
+      "stock": "1",
+      "categoria": [],
+      "love": false,
+      "box": false,
+      "bouquet": false,
+      "graduacion": false,
+      "detalles": "rosas cortecia",
+      "foto": "",
+      "envio": false
     }
   ]
 }

@@ -12,7 +12,8 @@ const Footer = () => {
           <h2 className="footer__Title">Florería bloom Yirley</h2>
           <div className="shopify-section-footer__Content">
             <div className="footer__Content">
-            <p><FontAwesomeIcon icon={faPhone} /> 992 923 999</p><p>floreriabloomyirley.com</p>
+            <p><FontAwesomeIcon icon={faPhone} /> 992 923 999</p>
+            <p>floreriabloomyirley.com</p>
             </div>
             <div className="footer__Social">
                <a href="" className="Link Link--primary" target="_blank" rel="noopener" aria-label="Facebook">
