@@ -1,0 +1,116 @@
+#menu-catalogo {
+    display: none;
+
+    /* Hacer funcionar el checkbox -> Hacer funcionar el menú hamburgüesa */
+    &:checked + .nav-bar-tienda {
+        display: block;
+    }
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors */
+ 
+
+
+}
+.catalogo-container{
+    display: grid;
+    grid-template-columns:55% 45%;
+    padding: 5px;
+    width: 90%;
+    gap: 10px;
+    border: solid;
+    border-radius: 30px;
+    @media screen and (min-width: 576px){
+        grid-template-columns:50% 50%; 
+    }
+    @media screen and (min-width: 992px){
+        display: none;
+  }
+}
+.price{
+    &__title{
+        justify-items: left;
+        font-size: 25px;
+        margin-left:20px;
+        margin-bottom: 10px;
+    }
+    &__input{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        margin: 0px 10px 30px 0px;
+    }
+    &__field{
+        display: flex;
+        justify-items: center;
+        animation: none;
+        width:100px;
+        font-size: 29px;
+    }
+    &__separator{
+        display: flex;
+        font-size: 29px;
+    }
+    &__slider{
+        width: 80%;
+        height: 5px;
+        border-radius: 5px;
+        background: gray;
+        position: relative;
+        margin: 0 auto;
+    }
+    @media screen and (min-width: 576px){
+        &__title{
+            font-size: 30px;
+            margin-left:20px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.input-min{
+    animation: none;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+}
+.input-max{
+    animation: none;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+}
+input[type="range"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    pointer-events: none;
+    position: absolute;
+   
+   
+}
+
+.section-tienda{
+    display: flex;
+    background-color:#FFD65A;
+    overflow: hidden;
+    padding: 1px;
+    font-size: 6vw;
+    overflow-wrap: break-word;
+    justify-content: center;
+    border:white;
+    border-bottom-style: dashed;
+    border-width: 10px;
+    
+    @media screen and (min-width: 576px){
+        font-size: 5vw;
+        border-width: 18px;  
+    }
+    @media screen and (min-width: 992px){
+        font-size: 4vw; 
+        border-width: 18px; 
+    }
+    @media screen and (min-width: 1200px){
+        font-size: 3vw; 
+        border-width: 18px; 
+    }
+}

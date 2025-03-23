@@ -16,13 +16,13 @@ const Footer = () => {
             <p>floreriabloomyirley.com</p>
             </div>
             <div className="footer__Social">
-               <a href="" className="Link Link--primary" target="_blank" rel="noopener" aria-label="Facebook">
+               <a href='' className="Link Link--primary" target="_blank" rel="noopener" aria-label="Facebook">
                   <span className="Icon-Wrapper--clickable">
                   <FontAwesomeIcon icon={faFacebookF} style={{color: "#f7f3f3",}} />{' '}
               </span>
                 </a>
                                
-           <a href="" className="Link Link--primary" target="_blank" rel="noopener" aria-label="Instagram">
+           <a href='' className="Link Link--primary" target="_blank" rel="noopener" aria-label="Instagram">
                   <span className="Icon-Wrapper--clickable">
                   <FontAwesomeIcon icon={faInstagram} style={{color: "#f7f3f3",}}/>
                   </span>

@@ -8,12 +8,18 @@
 }
 .formu{
     justify-self: center;
+    background-color: rgba(238, 176, 82, 0.499);
+    border: dotted;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.formu_nuevo{
+    justify-self: center;
     background-color: rgba(250, 215, 215, 0.499);
     border: dotted;
     border-radius: 15px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
-
 .formulario{
     width: 85vw;
     margin: 0.5rem;

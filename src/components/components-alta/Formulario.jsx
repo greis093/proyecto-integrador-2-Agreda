@@ -92,10 +92,10 @@ const Formulario = () => {
   return (
     <>
       <h2 className="titulo_formulario">Formulario de { productoAEditar ? 'edición' : 'carga'} de productos</h2>
-        <div className="formu">
+        <div className={productoAEditar ? "formu" : "formu_nuevo"}>
       <form className="formulario" onSubmit={handleSubmit}>
         <div className="formulario__fila">
-            <label  className='formulario__datos'htmlFor="lbl-nombre">Nombre</label>
+            <label  className='formulario__datos' htmlFor="lbl-nombre">Nombre</label>
             <input className='formulario__input'type="text" 
             id="lbl-nombre" 
             name="nombre" 
@@ -116,14 +116,14 @@ const Formulario = () => {
             <input className='formulario__input' type="number" 
             id="lbl-precio_antiguo" 
             name="precio_antiguo" 
-           placeholder="S/"
+             placeholder="S/"
             value={form.precio_antiguo} 
             onChange={handleChange} required/>
         </div>
         <div className="formulario__fila">
             <label className='formulario__datos' htmlFor="lbl-stock">Stock</label>
             <input className='formulario__input' type="number" 
-            id="lbl-stock" 
+           id="lbl-stock" 
             name="stock" 
             value={form.stock} 
             onChange={handleChange} required/>
