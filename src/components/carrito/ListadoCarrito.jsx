@@ -7,9 +7,12 @@ const ListadoCarrito = () => {
 
     const { carrito, 
         limpiarCarritoContext,
-        guardarCarritoBackendContext } = useContext(CarritoContext)
-    
-    console.log(carrito)
+        guardarCarritoBackendContext,
+        calcularCantidadProductosCarritoContext } = useContext(CarritoContext)
+
+        const cantidadItem =calcularCantidadProductosCarritoContext(carrito)
+         console.log("res",cantidadItem)
+  
 
     const handleComprar = () => {
         console.log('Comprando...')

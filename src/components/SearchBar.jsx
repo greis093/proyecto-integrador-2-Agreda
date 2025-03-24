@@ -3,7 +3,14 @@ import './SearchBar.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCartShopping} from '@fortawesome/free-solid-svg-icons'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
+import CarritoContext from "../contexts/CarritoContext"
+import { useContext } from 'react'
+
 const SearchBar = () => {
+  
+  const {carrito,calcularCantidadProductosCarritoContext } = useContext(CarritoContext)
+ 
+ const carritoNavegador = calcularCantidadProductosCarritoContext(carrito)
   return (
     <div className="search-bar">
     <div className="menu-toogle">
@@ -24,7 +31,9 @@ const SearchBar = () => {
     </div>
     <div className="search-bar__carrito-container"> 
       <Link to='/carrito'>
-      <FontAwesomeIcon icon={faCartShopping} style={{color: "#ffffff",}}/>
+      <p className='numero_carrito'>{carritoNavegador}</p>
+      <FontAwesomeIcon icon={faCartShopping}  style={{color: "#ffffff"}}/>
+      
       </Link>
     </div>
   </div> 

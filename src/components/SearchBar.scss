@@ -17,7 +17,7 @@
         height: auto;
         width: auto;
         object-fit: contain;
-        width:40vw;
+        width:130px;
     }
     &__carrito-container {
         /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */ 
@@ -25,18 +25,24 @@
         text-align: center; /* Centra horizontalmente */
         align-self: center;/* Centra verticalmente */
         color: white;
-        font-size: 6vw; // Aumenta el tamaño 
+        font-size: 30px; // Aumenta el tamaño 
+        padding-top: 9px;
+        margin-right: 15px;
     }
     /* TABLET ->  max 576px  */
+    @media screen and (min-width: 576px){
     &__logo { /* .search-bar__logo-container */
-        @media screen and (min-width: 576px){
+        
             width:12rem;  
         }
+    &__carrito-container {
+            font-size: 50px; // Aumenta el tamaño 
+    }
     }
     /* responsivo ->  max 992px  */
     @media screen and (min-width: 992px){
         &__carrito-container {
-            font-size: 4 vw; // Aumenta el tamaño 
+            font-size: 50px; // Aumenta el tamaño 
     }
    }
     /* DESKTOP ->  max 1200px  */
@@ -48,11 +54,67 @@
             width:15rem;  
 }
    &__carrito-container {
-        font-size: 3vw;
+        font-size: 70px;
     }
 }
 }
+ 
+/* ----------------------------------------------- */
+/* NUMERO CARRITO                                       */
+/* ----------------------------------------------- */
 
+.numero_carrito{
+    position:absolute;
+    top: 1%;
+    right: 2%;
+    background-color: rgb(132, 48, 48);
+    color: white;
+    border-radius: 50%;
+    padding:4px 8px;
+    font-size: 15px;
+    font-weight: bold;
+   
+}
+@media screen and (min-width: 576px){
+    .numero_carrito{
+        position:absolute;
+        top: 2%;
+        right: 2%;
+        background-color: rgb(132, 48, 48);
+        color: white;
+        border-radius: 50%;
+        padding:4px 8px;
+        font-size: 20px;
+        font-weight: bold;
+    } 
+}
+@media screen and (min-width: 992px){
+    .numero_carrito{
+        position:absolute;
+        top: 2%;
+        right: 3%;
+        background-color: rgb(132, 48, 48);
+        color: white;
+        border-radius: 50%;
+        padding:4px 8px;
+        font-size: 20px;
+        font-weight: bold;
+    } 
+
+}
+@media screen and (min-width:1200px){
+    .numero_carrito{
+        position:absolute;
+        top: 2%;
+        right: 3.5%;
+        background-color: rgb(132, 48, 48);
+        color: white;
+        border-radius: 50%;
+        padding:4px 8px;
+        font-size: 26px;
+        font-weight: bold;
+    } 
+}
 
 /* ----------------------------------------------- */
 /* MENU TOOGLE                                        */

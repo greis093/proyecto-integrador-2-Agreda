@@ -1,13 +1,14 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { peticionesHttp } from "../helpers/peticiones-http";
 
 //! 1. Creación del contexto
 const CarritoContext = createContext()
-
+var cont = 0
 //! 2. Armamos en Provider
 const CarritoProvider = ({children}) => {
     const urlCarrito= import.meta.env.VITE_BACKEND_CARRITO
+    const [cantCarrito, setcantCarrito] = useState(cont)
   const[agregarAlCarrito, eliminarDelCarrito, limpiarCarrito, carrito]=useLocalStorage('carrito',[])
   
   function elProductoEstaEnElCarrito(producto){
@@ -23,10 +24,8 @@ const CarritoProvider = ({children}) => {
     return carrito.find(prod => prod.id === producto.id)
   }
   const agregarProductoAlCarritoContext= (producto) => {
-    
-
     console.log('ya estoy en el agregar del contexto', producto)
-
+    setcantCarrito(producto)
     // Averiguo si esta o no esta en el carrito
     if(!elProductoEstaEnElCarrito(producto)){
         console.log('No esta en el carrito')
@@ -65,14 +64,20 @@ const CarritoProvider = ({children}) => {
             console.error('[guardarCarritoBackendContext]', error)
         }
     }
-    //const calcularCantidadProductosCarritoContext=()=>{
-        
-    //}
+    const calcularCantidadProductosCarritoContext=(carrito)=>{
+        console.log("este es el carrito",carrito)
+        return carrito.reduce((total, producto) => total + producto.cantidad, 0);
+     
+    
+    }
   const data={
         agregarProductoAlCarritoContext,
         eliminarProductoDelCarritoContext,
         limpiarCarritoContext,
         guardarCarritoBackendContext,
+        calcularCantidadProductosCarritoContext,
+        cantCarrito,
+        setcantCarrito,
         carrito
     }
 
