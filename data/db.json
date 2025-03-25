@@ -189,7 +189,31 @@
     }
   ],
   "carritos": [
-   
+    {
+      "id": "f0b4",
+      "createAt": 1742918319413,
+      "carrito": [
+        {
+          "id": "1",
+          "nombre": "Caja de 6 rosas premium",
+          "stock": "4",
+          "foto": "/public/imgs/caja_6_rosas_premium.webp",
+          "precio": "120",
+          "precio_antiguo": "400",
+          "detalles": "Caja con 6 rosas + tarjeta con dedicatoria",
+          "categoria": [
+            "bouquet",
+            "graduacion"
+          ],
+          "love": false,
+          "box": false,
+          "bouquet": true,
+          "graduacion": true,
+          "envio": false,
+          "cantidad": 3
+        }
+      ]
+    }
   ],
   "mensajes": [
     {

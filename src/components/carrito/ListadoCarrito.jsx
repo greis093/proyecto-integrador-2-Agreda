@@ -6,20 +6,10 @@ import './ListadoCarrito.scss'
 const ListadoCarrito = () => {
 
     const { carrito, 
-        limpiarCarritoContext,
-        guardarCarritoBackendContext
+       
      } = useContext(CarritoContext)
 
 
-    const handleComprar = () => {
-        console.log('Comprando...')
-        guardarCarritoBackendContext()
-    }
-    
-    const handleLimpiarCarrito = () => {
-        console.log('Vaciando carrito...')
-        limpiarCarritoContext()
-    }
 
   return (
     <>
@@ -51,13 +41,7 @@ const ListadoCarrito = () => {
     </table>
     </div>
     <hr />
-    { !carrito.length <= 0 && (
-            <>
-                <button onClick={handleLimpiarCarrito}>Vaciar Carrito</button>
-                <button onClick={handleComprar}>Comprar</button>
-            </>
-        )
-    }
+
 </>
   )
 }
