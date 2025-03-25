@@ -23,7 +23,8 @@ const ListadoCarrito = () => {
 
   return (
     <>
-    <table className='tabla-carrito'>
+    <div className="scroll" >
+    <table className='tabla-carrito' >
         <thead>
             <tr>
                 <th>Foto</th>
@@ -31,7 +32,7 @@ const ListadoCarrito = () => {
                 <th>Precio</th>
                 <th>Cantidad</th>
                 <th>Subtotal</th>
-                <th>Delete</th>
+               
             </tr>
         </thead>
         <tbody>
@@ -48,6 +49,7 @@ const ListadoCarrito = () => {
             }
         </tbody>
     </table>
+    </div>
     <hr />
     { !carrito.length <= 0 && (
             <>

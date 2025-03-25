@@ -13,7 +13,6 @@
 
     &__inferior{
         text-align: center;
-     
         border-radius: 10px;
         padding-top: 10px;
         color: rgb(14, 13, 13);
@@ -21,15 +20,23 @@
     }
     &__botones{
         background-color: rgba(97, 103, 103, 0.478);
-        width: 20px;
+        width: 18px;
         border: none;
         border-radius: 30%;
         color: aliceblue;
         font-size: 20px;
-        font-weight: 900;        
+        font-weight: 900; 
+        cursor: pointer;       
+    }
+    &__numero{
+        padding: 0px 3px 0px 3px;
     }
   
-    
+   
+}
+.basurero{
+   
+    cursor: pointer;
 }
 
 @media screen and (min-width: 576px){
@@ -81,7 +88,8 @@
         }
         &__botones{
             font-size: 20px;
-            font-weight: 900;        
+            font-weight: 900;   
+            width:25px;     
         }
  
 }
