@@ -1,17 +1,57 @@
-table.tabla-carrito {
+.tabla-carrito {
     border-collapse: collapse;
     width: 95%;
     margin: 1rem auto;
-    
+    font-size: 10px;
 
     th, td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
+        border: 1px dashed #ddd;
+        text-align: center;
     }
 
     th {
         background-color: #f2f2f2;
     }
+    td{
+        font-size: 16px;
+        font-weight: 900;
+    }
 
+}
+@media screen and (min-width: 576px){
+    .tabla-carrito {     
+        width: 95%;
+        margin: 1rem auto;
+        font-size: 20px;
+
+        td{
+            font-size: 18px;
+            font-weight: 900;
+        }
+    }
+}
+@media screen and (min-width: 992px){
+    .tabla-carrito {     
+        width: 95%;
+        margin: 1rem auto;
+        font-size: 23px;
+
+        td{
+            font-size: 20px;
+            font-weight: 900;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .tabla-carrito {     
+        width: 95%;
+        margin: 1rem auto;
+        font-size: 30px;
+
+        td{
+            font-size: 25px;
+            font-weight: 900;
+        }
+    }
 }
