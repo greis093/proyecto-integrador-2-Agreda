@@ -16,7 +16,7 @@
     }
     &__image {
         object-fit:fill;
-        width: 80vw;    
+        width: 70vw;    
     }
     &__heading{
         display: flex;
@@ -27,7 +27,7 @@
     &__content{
         display: block;
         text-align: center;
-        width: 80vw;
+        width: 70vw;
     }
     &__description{
         font-size: 5vw;
@@ -110,22 +110,22 @@
 
     @media screen and (min-width: 1200px){
         & { /* .card */
-            width: 20vw;
+            width: 18vw;
             height: auto;
             &__image {
                 object-fit:cover;
-                width: 20vw;
+                width: 18vw;
                }
 
             &__heading{
                 display: flex;
                 justify-content: center;
-                font-size: 1.8vw;
+                font-size: 1.6vw;
             }
             &__content{
                 display: block;
                 text-align: center;
-                width: 20vw;
+                width: 18vw;
             }
             &__description{
                 font-size: 1.5vw;

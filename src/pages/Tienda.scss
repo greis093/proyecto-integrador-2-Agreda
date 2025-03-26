@@ -1,3 +1,82 @@
+.section-tienda{
+    display: flex;
+    background-color:#FFD65A;
+    overflow: hidden;
+    padding: 1px;
+    font-size: 6vw;
+    overflow-wrap: break-word;
+    justify-content: center;
+    border:white;
+    border-bottom-style: dashed;
+    border-width: 10px;
+    
+    @media screen and (min-width: 576px){
+        font-size: 5vw;
+        border-width: 18px;  
+    }
+    @media screen and (min-width: 992px){
+        font-size: 4vw; 
+        border-width: 18px; 
+    }
+    @media screen and (min-width: 1200px){
+        font-size: 3vw; 
+        border-width: 18px; 
+    }
+}
+
+.tienda-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    gap: 25px;
+    @media screen and (min-width: 992px){
+        grid-template-columns: 35% 65%; 
+        
+    }
+    @media screen and (min-width: 1200px){
+        grid-template-columns: 20% 80%; 
+        gap:0px;
+        
+    }
+}
+
+.productos-container{ 
+    /*Si lo realizo por flexbox */
+    /*display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;*/
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;  /*Espacio entre elementos*/
+
+    @media screen and (min-width: 576px){
+        &{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px 25px 20px 25px;  /*Espacio entre elementos*/
+        }
+    }
+
+    @media screen and (min-width: 992px){
+        &{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px 25px 20px 25px;  /*Espacio entre elementos*/
+        }
+    }
+
+    @media screen and (min-width: 1200px){
+        &{
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 20px 0px 30px 15px;  /*Espacio entre elementos*/
+            gap:28px;
+        }
+    }
+}
 #menu-catalogo {
     display: none;
 
@@ -7,7 +86,85 @@
     }
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors */
  
+.section-tienda{
+    display: flex;
+    background-color:#FFD65A;
+    overflow: hidden;
+    padding: 1px;
+    font-size: 6vw;
+    overflow-wrap: break-word;
+    justify-content: center;
+    border:white;
+    border-bottom-style: dashed;
+    border-width: 10px;
+    
+    @media screen and (min-width: 576px){
+        font-size: 5vw;
+        border-width: 18px;  
+    }
+    @media screen and (min-width: 992px){
+        font-size: 4vw; 
+        border-width: 18px; 
+    }
+    @media screen and (min-width: 1200px){
+        font-size: 3vw; 
+        border-width: 18px; 
+    }
+}
 
+.tienda-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    gap: 25px;
+    @media screen and (min-width: 992px){
+        grid-template-columns: 35% 65%; 
+        
+    }
+    @media screen and (min-width: 1200px){
+        grid-template-columns: 20% 80%; 
+        gap:0px;
+        
+    }
+}
+
+.productos-container{ 
+    /*Si lo realizo por flexbox */
+    /*display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;*/
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;  /*Espacio entre elementos*/
+
+    @media screen and (min-width: 576px){
+        &{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px 25px 20px 25px;  /*Espacio entre elementos*/
+        }
+    }
+
+    @media screen and (min-width: 992px){
+        &{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px 25px 20px 25px;  /*Espacio entre elementos*/
+        }
+    }
+
+    @media screen and (min-width: 1200px){
+        &{
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 20px 0px 30px 15px;  /*Espacio entre elementos*/
+            gap:28px;
+        }
+    }
+}
 
 }
 .catalogo-container{
@@ -89,28 +246,132 @@ input[type="range"]{
    
 }
 
-.section-tienda{
-    display: flex;
-    background-color:#FFD65A;
-    overflow: hidden;
-    padding: 1px;
-    font-size: 6vw;
-    overflow-wrap: break-word;
-    justify-content: center;
-    border:white;
-    border-bottom-style: dashed;
-    border-width: 10px;
-    
-    @media screen and (min-width: 576px){
-        font-size: 5vw;
-        border-width: 18px;  
-    }
-    @media screen and (min-width: 992px){
-        font-size: 4vw; 
-        border-width: 18px; 
-    }
-    @media screen and (min-width: 1200px){
-        font-size: 3vw; 
-        border-width: 18px; 
-    }
+
+.slider .progress{
+    height: 5px;
+    left: 25%;
+    right: 25%;
+    background: transparent;
+    border-radius: 5px;
+    position: absolute;
+   
 }
+.range-input{
+   position:relative; 
+   margin-bottom: 20px;
+   width: 80%;
+    justify-self: center;
+    justify-content: center;
+   
+}
+
+.range-input input{
+    position:absolute;
+    top: -10px;
+    height: 5px;
+    background: none;
+    pointer-events: auto;
+    width: 100%; 
+}
+
+input[type="range"]::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    height: 5px;
+}
+
+.menu{
+    &__catalogo{
+        font-size: 25px;
+        justify-items: right;
+        justify-self: right;
+    }
+    &__icono{
+        font-size: 25px;
+    }
+
+    @media screen and (min-width: 576px){
+    
+        &__catalogo{
+              font-size: 30px;
+         }
+        &__icono{
+        font-size: 30px;
+          }
+    }
+
+}
+
+.nav-bar-tienda {
+    padding-top: 10px;
+    display: none;
+    width: 90%;
+    justify-self: center;
+    box-shadow: 1px 1px 20px 1px rgb(244, 178, 178) inset;
+    border-radius: 20px;
+    &__titulo{
+        font-size: 2.5vh;
+        text-align: center;
+    }
+    
+    &__filtros{
+        text-align: left;
+        font-size: 20px;
+        padding: 8px;
+    }
+    
+    &__boton{
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+        &__busqueda{
+            color: rgb(112, 105, 105);
+            background-color: rgb(244, 178, 178);
+            height: 30px;
+            font-size: 20px;
+            width: 100%;
+            border: none;
+            border-radius: 0px 0px 20px 20px ;
+        }
+
+    }
+
+    @media screen and (min-width: 576px){
+        width: 80%;
+        &__titulo{
+            font-size: 30px;
+            text-align: center;
+        }
+        &__filtros{   
+        margin-left: 20px;
+        &____nav-item{
+         margin-top: 20px; 
+        }
+        }
+    }
+        /* DESKTOP ->  max 992px  */
+    @media screen and (min-width: 992px) {
+        
+        & {
+            display: block;
+            justify-self: end;
+            margin-top: 20px;
+            width: 95%;
+            height:fit-content;
+            &__titulo{
+                font-size: 3.5vh;
+                margin: 10px;
+            }
+            &__filtros{   
+                margin-left: 20px;
+                }
+            &__nav-item{
+                    margin-top: 20px;
+                }
+          
+        } 
+              
+    }
+     
+   
+}
+

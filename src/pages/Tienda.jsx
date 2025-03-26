@@ -73,13 +73,13 @@ const Tienda = () => {
       </nav>
 
       <div className="productos-container" id="container-productos-tienda">
-      <section className="cards-container" id="container-productos">
+    
         {
           productos && productos.map((producto) =>(
             <Card producto={producto} key={producto.id}/>
           ))
         }
-         </section>
+      
       </div>
       </section>
     </>
