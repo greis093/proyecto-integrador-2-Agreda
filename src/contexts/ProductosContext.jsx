@@ -80,7 +80,7 @@ const ProductosProvider = ({ children}) =>{
         crearProdutoContext,
         actualizarProductoContext,
         eliminarProductoContext,
-        productoAEditar,
+        productoAEditar,  
         setProductoAEditar
     }
     return<ProductosContext.Provider value={data}>{children}</ProductosContext.Provider>
