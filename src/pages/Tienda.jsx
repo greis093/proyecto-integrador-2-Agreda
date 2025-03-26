@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import useTitulo from '../hooks/useTitulo'
 import Card from "../components/Card"
-
+import './Tienda.scss'
 import ProductosContext from "../contexts/ProductosContext"
 
 
