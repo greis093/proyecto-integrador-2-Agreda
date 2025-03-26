@@ -7,6 +7,10 @@ const Carrucel = () => {
      "imgs/portada_tienda.webp",
      "imgs/portada_tienda2.webp",
    ];
+   const imagesMovil = [
+    "imgs/portada_movil.webp",
+    "imgs/portadamovil-2.webp",
+  ];
     const [carrucel, setcarrucel] = useState(0);
     useEffect(() => {
      const interval = setInterval(() => {
@@ -15,12 +19,12 @@ const Carrucel = () => {
      return () => clearInterval(interval);
    });
   return (
-
-    <div className="gallery-container">
+      <>
+       <div className="gallery-container">
       <div className="image-wrapper">
         <img src={images[carrucel]} alt={`Foto ${carrucel + 1}`} />
       </div>
-      <NavLink to= "./Tienda"className="shop-button">Tienda</NavLink>
+      <NavLink to= "./Tienda" className="shop-button">Tienda</NavLink>
       <div className="dots">
         {images.map((_, index) => (
           <span
@@ -31,6 +35,25 @@ const Carrucel = () => {
         ))}
       </div>
     </div>
+
+    <div className="gallery-container-mobil">
+      <div className="image-wrapper">
+        <img src={imagesMovil[carrucel]} alt={`Foto ${carrucel + 1}`} />
+      </div>
+      <NavLink to= "./Tienda"className="shop-button">Tienda</NavLink>
+      <div className="dots">
+        {imagesMovil.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === carrucel ? "active" : ""}`}
+            onClick={() => setcarrucel(index)}
+          ></span>
+        ))}
+      </div>
+    </div>
+      </>
+   
+    
   )
 }
 
