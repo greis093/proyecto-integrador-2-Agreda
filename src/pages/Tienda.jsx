@@ -7,8 +7,17 @@ import FiltroTipoArreglo from '../components/tienda/FiltroTipoArreglo'
 
 
 const Tienda = () => {
-  const{ productos} = useContext(ProductosContext)
+  let { productos, productosFiltrados } = useContext(ProductosContext)
   useTitulo('Tienda')
+ console.log("productosFiltrados: ", productosFiltrados)
+ console.log("productosFiltrados.lenght: ", productosFiltrados.lenght)
+
+ console.log("productos: ", productos)
+
+  if (productosFiltrados.length === 0) {
+    productosFiltrados = productos;
+  }
+
   return (
     <>
     <section className="section-tienda">
@@ -24,10 +33,10 @@ const Tienda = () => {
 
       <div className="productos-container" id="container-productos-tienda">
     
-        {
-          productos && productos.map((producto) =>(
+       {
+          productosFiltrados && productosFiltrados.map((producto) =>(
             <Card producto={producto} key={producto.id}/>
-          ))
+         ))
         }
       
       </div>

@@ -132,4 +132,30 @@
             }
         }
     }
+    
+}
+.lomoney-processed{
+                padding: 14px;
+}
+
+.botones-card{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px 10px 15px;
+    &__detalle{
+            font-size: 20px;
+            padding: 8px;
+            width: 100px;
+            border-radius: 10px;
+            background-color: #60efff;
+            cursor: pointer;
+    }
+    &__compra{
+        font-size: 20px;
+        padding: 8px;
+        width: 100px;
+        border-radius: 10px;
+        background-color: #45d438;
+        cursor: pointer;
+    }
 }

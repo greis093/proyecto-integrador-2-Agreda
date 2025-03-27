@@ -48,7 +48,9 @@
         "bouquet",
         "box"
       ],
+      "bouquet": true,
       "box": true,
+      "love": true,
       "graduacion": false
     },
     {
@@ -63,7 +65,9 @@
         "love",
         "bouquet"
       ],
+      "bouquet": true,
       "box": false,
+      "love": true,
       "graduacion": false
     },
     {
@@ -78,8 +82,10 @@
         "love",
         "bouquet"
       ],
+      "bouquet": true,
+      "box": false,
       "love": true,
-      "bouquet": true
+      "graduacion": false
     },
     {
       "id": "6",
@@ -95,7 +101,8 @@
       ],
       "bouquet": false,
       "box": true,
-      "love": true
+      "love": true,
+      "graduacion": false
     },
     {
       "id": "7",
@@ -110,7 +117,10 @@
         "bouquet",
         "love"
       ],
-      "bouque": true
+      "bouquet": true,
+      "box": false,
+      "love": true,
+      "graduacion": false
     },
     {
       "id": "8",
@@ -124,22 +134,12 @@
         "love",
         "bouquet"
       ],
-      "bouque": true
+      "bouquet": true,
+      "box": false,
+      "love": true,
+      "graduacion": false
     },
-    {
-      "id": "0c4c",
-      "nombre": "Carlos",
-      "precio": "120",
-      "precio_antiguo": "120",
-      "stock": "33",
-      "categoria": [
-        "bouquet"
-      ],
-      "detalles": "dedededede",
-      "foto": "",
-      "envio": true,
-      "bouquet": true
-    },
+
     {
       "id": "5d85",
       "nombre": "Yirley Greicy",

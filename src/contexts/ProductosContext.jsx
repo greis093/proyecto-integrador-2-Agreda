@@ -10,10 +10,11 @@ const ProductosContext= createContext()
 const ProductosProvider = ({ children}) =>{
     const url= import.meta.env.VITE_BACKEND_PRODUCTOS
     const [productos, setProductos] = useState(null)
+    const [productosFiltrados, setProductosFiltrados] = useState([])
     const [productoAEditar,setProductoAEditar]= useState(null)
     useEffect(()=>{
         getAllProductos()
-    },)
+    },[])
 
     const getAllProductos = async ()=>{
         try {
@@ -74,14 +75,37 @@ const ProductosProvider = ({ children}) =>{
                 console.error('[eliminarProductoContext]',error)
             }
     }
+    const filtrarProductosATienda=(filtroProducto)=>{
+        console.log("llego aqui",filtroProducto)
+        console.log("llego productos",productos)
 
+        const prodsFiltrados = productos.filter(producto => {
+                
+            if(filtroProducto.love && producto.categoria.indexOf("love") !=-1){
+                return producto
+            }
+            if(filtroProducto.box && producto.categoria.indexOf("box") !=-1){
+                return producto
+            }
+            if(filtroProducto.bouquet && producto.categoria.indexOf("bouquet") !=-1){
+                return producto
+            }
+            if(filtroProducto.graduacion && producto.categoria.indexOf("graduacion") !=-1){
+                return producto
+            }
+        }
+          );
+     setProductosFiltrados(prodsFiltrados) 
+    }
     const data={
         productos,
         crearProdutoContext,
         actualizarProductoContext,
         eliminarProductoContext,
         productoAEditar,  
-        setProductoAEditar
+        filtrarProductosATienda,
+        setProductoAEditar,
+        productosFiltrados
     }
     return<ProductosContext.Provider value={data}>{children}</ProductosContext.Provider>
 }

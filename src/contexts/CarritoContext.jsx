@@ -102,6 +102,7 @@ const CarritoProvider = ({children}) => {
   const data={
         agregarProductoAlCarritoContext,
         eliminarProductoDelCarritoContext,
+        elProductoEstaEnElCarrito,
         limpiarCarritoContext,
         guardarCarritoBackendContext,
         calcularCantidadProductosCarritoContext,
