@@ -1,11 +1,12 @@
 import { useContext, useEffect, useState } from 'react'
 import './Card.scss'
 import CarritoContext from "../contexts/CarritoContext"
+import { useNavigate } from 'react-router'
 
 const Card = ({producto}) => {
   const {agregarProductoAlCarritoContext,elProductoEstaEnElCarrito} = useContext(CarritoContext)
   const [valor, setValor] = useState('añadir')
-
+  const navigate = useNavigate()
   useEffect(() => {
     // Si el producto ya está en el carrito, actualizar el estado al cargar la página
     if (elProductoEstaEnElCarrito(producto)) {
@@ -13,7 +14,10 @@ const Card = ({producto}) => {
     }
   }, [producto, elProductoEstaEnElCarrito]);
   
- 
+  const handleVer = (id) => {
+    console.log(id)
+    navigate(`/productocarrito/detalle/${id}`)
+  }
  
   const handleAgregar = () => {
     if (!elProductoEstaEnElCarrito(producto)) {
@@ -42,8 +46,8 @@ const Card = ({producto}) => {
               </span>  
             </bdi> <br/>
             <div className='botones-card'>
-            <button className='botones-card__detalle' onClick={()=> handleAgregar(producto)}>Detalle</button>
-            <button  className='botones-card__compra' onClick={()=> handleAgregar(producto)}>{valor}</button>
+            <button className="boton__ver" onClick={() => handleVer(producto.id)}>Ver</button>
+            <button  className='botones-card__compra' onClick={()=> handleAgregar()}>{valor}</button>
             </div>
         </div>
         </div>

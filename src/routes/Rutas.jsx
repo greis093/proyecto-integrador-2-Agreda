@@ -8,6 +8,7 @@ import NoEncontrado from "../pages/NoEncontrado"
 import Tienda from "../pages/Tienda"
 import ProductosDetalle from "../pages/ProductosDetalle"
 import MensajesClientes from "../pages/MensajesClientes"
+import ProductoDetalleCarrito from "../pages/ProductoDetalleCarrito"
 
 const Rutas = () => {
     const hookRutas =useRoutes(
@@ -39,6 +40,10 @@ const Rutas = () => {
             {
                 path: '/productos/detalle/:id', /* :id (obligatorio) | :id? (opcional) */
                 element: <ProductosDetalle />
+            },
+            {
+                path: '/productocarrito/detalle/:id', /* :id (obligatorio) | :id? (opcional) */
+                element: <ProductoDetalleCarrito />
             },
             {
                 path: '/*',
