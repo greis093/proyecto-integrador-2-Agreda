@@ -76,9 +76,6 @@ const ProductosProvider = ({ children}) =>{
             }
     }
     const filtrarProductosATienda=(filtroProducto)=>{
-        console.log("llego aqui",filtroProducto)
-        console.log("llego productos",productos)
-
         const prodsFiltrados = productos.filter(producto => {
                 
             if(filtroProducto.love && producto.categoria.indexOf("love") !=-1){
@@ -97,6 +94,15 @@ const ProductosProvider = ({ children}) =>{
           );
      setProductosFiltrados(prodsFiltrados) 
     }
+    const botonFiltrarNavbar= (palabras)=>{
+        console.log("llego palabra",palabras)
+        const palabrasSeparadas = palabras.toLowerCase().split(/\s+/);
+        const filtro =productos.filter(obj => 
+            palabrasSeparadas.some(palabra => String(obj.descripcion || "").toLowerCase().includes(palabra))
+        );
+        console.log(filtro)
+    }
+
     const data={
         productos,
         crearProdutoContext,
@@ -105,6 +111,7 @@ const ProductosProvider = ({ children}) =>{
         productoAEditar,  
         filtrarProductosATienda,
         setProductoAEditar,
+        botonFiltrarNavbar,
         productosFiltrados
     }
     return<ProductosContext.Provider value={data}>{children}</ProductosContext.Provider>

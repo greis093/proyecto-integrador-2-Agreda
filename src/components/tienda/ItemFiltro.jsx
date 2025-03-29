@@ -4,7 +4,7 @@ import ProductosContext from "../../contexts/ProductosContext"
 const ItemFiltro = () => {
   const {filtrarProductosATienda} = useContext(ProductosContext)
     const Inicial={
-        "love":false,
+        love:false,
         box:false,
         bouquet:false,
         graduacion:false,

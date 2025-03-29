@@ -9,6 +9,7 @@ import Tienda from "../pages/Tienda"
 import ProductosDetalle from "../pages/ProductosDetalle"
 import MensajesClientes from "../pages/MensajesClientes"
 import ProductoDetalleCarrito from "../pages/ProductoDetalleCarrito"
+import Filtro from "../pages/Filtro"
 
 const Rutas = () => {
     const hookRutas =useRoutes(
@@ -52,6 +53,10 @@ const Rutas = () => {
             {
                 path: '/mensajes/detalles',
                 element: <MensajesClientes/>
+            },
+            {
+                path: '/buscar',
+                element: <Filtro/>
             }
         ]
     )
