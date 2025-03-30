@@ -75,7 +75,7 @@ const ProductosProvider = ({ children}) =>{
                 console.error('[eliminarProductoContext]',error)
             }
     }
-    const filtrarProductosATienda=(filtroProducto)=>{
+    const filtrarProductosATienda=async(filtroProducto)=>{
         const prodsFiltrados = productos.filter(producto => {
                 
             if(filtroProducto.love && producto.categoria.indexOf("love") !=-1){
@@ -95,11 +95,21 @@ const ProductosProvider = ({ children}) =>{
      setProductosFiltrados(prodsFiltrados) 
     }
     const botonFiltrarNavbar= (palabras)=>{
-        console.log("llego palabra",palabras)
         const palabrasSeparadas = palabras.toLowerCase().split(/\s+/);
-        const filtro =productos.filter(obj => 
-            palabrasSeparadas.some(palabra => String(obj.descripcion || "").toLowerCase().includes(palabra))
+        console.log("ffxx",productos)
+        if (!productos) {
+            console.warn("No hay productos disponibles para filtrar");
+            return;
+        }
+        const filtro =productos.filter(producto =>
+            palabrasSeparadas.some(f => producto.categoria.includes(f))||
+            // Verifica si el nombre incluye alguna palabra clave
+            palabrasSeparadas.some(f => producto.nombre.toLowerCase().includes(f.toLowerCase()))
+            ||
+            // Verifica si el nombre incluye alguna palabra clave
+            palabrasSeparadas.some(f => producto.detalles.toLowerCase().includes(f.toLowerCase()))
         );
+        setProductosFiltrados(filtro);
         console.log(filtro)
     }
 

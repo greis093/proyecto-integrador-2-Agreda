@@ -9,10 +9,6 @@ import FiltroTipoArreglo from '../components/tienda/FiltroTipoArreglo'
 const Tienda = () => {
   let { productos, productosFiltrados } = useContext(ProductosContext)
   useTitulo('Tienda')
- console.log("productosFiltrados: ", productosFiltrados)
- console.log("productosFiltrados.lenght: ", productosFiltrados.lenght)
-
- console.log("productos: ", productos)
 
   if (productosFiltrados.length === 0) {
     productosFiltrados = productos;

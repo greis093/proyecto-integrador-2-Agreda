@@ -22,6 +22,9 @@ const ItemFiltro = () => {
     //const filtrarProductosATienda 
       const handleSubmit =(e)=>{            
         e.preventDefault()
+        if(!filtro){
+          return
+          }
         filtrarProductosATienda(filtro)
             
             }
