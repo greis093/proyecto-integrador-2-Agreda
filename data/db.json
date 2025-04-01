@@ -9,13 +9,13 @@
       "precio_antiguo": "400",
       "detalles": "Caja con 6 rosas + tarjeta con dedicatoria",
       "categoria": [
-        "bouquet",
-        "graduacion"
+        "box",
+        "love"
       ],
-      "love": false,
-      "box": false,
-      "bouquet": true,
-      "graduacion": true,
+      "love": true,
+      "box": true,
+      "bouquet": false,
+      "graduacion": false,
       "envio": false
     },
     {
@@ -27,13 +27,13 @@
       "precio_antiguo": "79",
       "detalles": "Ramo de 3 Tulipanes + tarjeta con dedicatoria.",
       "categoria": [
-        "graduacion",
-        "love"
+        "love",
+        "bouquet"
       ],
-      "bouquet": false,
+      "bouquet": true,
       "box": false,
       "love": true,
-      "graduacion": true
+      "graduacion": false
     },
     {
       "id": "3",
@@ -138,54 +138,6 @@
       "box": false,
       "love": true,
       "graduacion": false
-    },
-
-    {
-      "id": "5d85",
-      "nombre": "Yirley Greicy",
-      "precio": "40",
-      "precio_antiguo": "200",
-      "stock": "234",
-      "categoria": [],
-      "love": false,
-      "box": false,
-      "bouquet": false,
-      "graduacion": false,
-      "detalles": "rosas cortecia",
-      "foto": "",
-      "envio": false
-    },
-    {
-      "id": "aaca",
-      "nombre": "Greicy",
-      "precio": "120",
-      "precio_antiguo": "500",
-      "stock": "234",
-      "categoria": [
-        "love"
-      ],
-      "love": true,
-      "box": false,
-      "bouquet": false,
-      "graduacion": false,
-      "detalles": "grfs",
-      "foto": "",
-      "envio": false
-    },
-    {
-      "id": "cc0b",
-      "nombre": "Greicy",
-      "precio": "120",
-      "precio_antiguo": "500",
-      "stock": "1",
-      "categoria": [],
-      "love": false,
-      "box": false,
-      "bouquet": false,
-      "graduacion": false,
-      "detalles": "rosas cortecia",
-      "foto": "",
-      "envio": false
     }
   ],
   "carritos": [
@@ -229,6 +181,13 @@
       "celular": "958224",
       "correo": "yirley093@gmail.com",
       "mensaje": "mas info"
+    },
+    {
+      "id": "8ce0",
+      "nombre_completo": "Greicy agreda",
+      "celular": "977806552",
+      "correo": "yirley093@gmail.com",
+      "mensaje": "hola deseo un servicio corporativo"
     }
   ]
 }

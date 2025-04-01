@@ -149,7 +149,12 @@
             border-radius: 10px;
             background-color: #60efff;
             cursor: pointer;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+            &:hover {
+             font-size: 17px;
+             box-shadow: 2px 8px 10px 5px rgba(75, 203, 194, 0.793);
     }
+}
     &__compra{
         font-size: 20px;
         padding: 8px;
@@ -157,5 +162,17 @@
         border-radius: 10px;
         background-color: #45d438;
         cursor: pointer;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+            &:hover {
+             font-size: 17px;
+             box-shadow: 2px 8px 10px 5px rgba(75, 203, 194, 0.793);
     }
+}
+&__comprado{
+    font-size: 20px;
+        padding: 8px;
+        width: 100px;
+        border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.62);
+}
 }

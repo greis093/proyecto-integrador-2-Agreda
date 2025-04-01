@@ -46,8 +46,8 @@ const Card = ({producto}) => {
               </span>  
             </bdi> <br/>
             <div className='botones-card'>
-            <button className="boton__ver" onClick={() => handleVer(producto.id)}>Ver</button>
-            <button  className='botones-card__compra' onClick={()=> handleAgregar()}>{valor}</button>
+            <button className="botones-card__detalle" onClick={() => handleVer(producto.id)}>Ver</button>
+            <button  className={`${valor === 'añadir' ? 'botones-card__compra' : 'botones-card__comprado'}`} onClick={()=> handleAgregar()}>{valor}</button>
             </div>
         </div>
         </div>
