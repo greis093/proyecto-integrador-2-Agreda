@@ -45,7 +45,7 @@ const TablaFila = ({producto}) => {
     navigate(`/productos/detalle/${id}`)
   }
   return (
-    <>
+    <tr>
       <td>{producto.nombre}</td>
       <td>{"S/"}{producto.precio}</td>
       <td>{"S/"}{producto.precio_antiguo}</td>
@@ -63,7 +63,7 @@ const TablaFila = ({producto}) => {
         <button className="boton__editar" onClick={()=>handleEditar(producto)}>Editar</button>
         <button className="boton__borrar" onClick={()=>handleEliminar(producto.id)}>Borrar</button>
       </td>
-    </>
+    </tr>
   )
 }
 
