@@ -13,12 +13,17 @@ const ResumenCompra = () => {
     
          const subtotalgeneral= subtotalPrecioCarritoContext(carrito) 
         const handleComprar = () => {
-            console.log('Comprando...')
+           
             guardarCarritoBackendContext()
+            Swal.fire({
+              title: "Comprado!",
+              text: "Compra exitosa.",
+              icon: "success"
+            })
         }
         
         const handleLimpiarCarrito = () => {
-            console.log('Vaciando carrito...')
+          
             //lógica de Sweet Alert
                         Swal.fire({
                           title: "¿Estás seguro?",

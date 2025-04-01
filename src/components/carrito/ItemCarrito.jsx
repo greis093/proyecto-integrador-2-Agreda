@@ -2,8 +2,9 @@ import React, { useContext } from 'react'
 import CarritoContext from '../../contexts/CarritoContext'
 import './itemCarrito.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faTrash} from '@fortawesome/free-solid-svg-icons'
+import {faTrash,faEye} from '@fortawesome/free-solid-svg-icons'
 import Swal from "sweetalert2";
+import {  useNavigate } from 'react-router'
 
 const ItemCarrito = ({producto}) => {
 
@@ -12,7 +13,7 @@ const ItemCarrito = ({producto}) => {
       agregarProductoAlCarritoContext,
       restarProductoAlCarritoContext
      } = useContext(CarritoContext)
-    
+     const navigate = useNavigate()
     const handleEliminar = (id) => {
         console.log('Eliminando el producto...', id)
         //lógica de Sweet Alert
@@ -50,13 +51,19 @@ const ItemCarrito = ({producto}) => {
        agregarProductoAlCarritoContext(producto)
         
     }
+    const handleVer = (id) => {
+      console.log(id)
+      navigate(`/productocarrito/detalle/${id}`)
+    } 
     const subtotal= subtotalPrecioItemCarritoContext(producto) 
   return (
     <tr>
         <td>
             <img src={producto.foto} alt={producto.nombre} width="50px" />
         </td>
-        <td>{producto.nombre}</td>
+        <td>
+         {producto.nombre} 
+        </td>
         <td>{producto.precio}</td>
         <td>
           <div className='celda_cantidad'>
@@ -76,6 +83,9 @@ const ItemCarrito = ({producto}) => {
         </td>
        
         <td>{subtotal}</td>
+        <td>
+        <button   onClick={() => handleVer(producto.id)}><FontAwesomeIcon icon={faEye} /></button>
+        </td>
         <td>
             <div className="basurero"onClick={() => handleEliminar(producto.id)}>
             <FontAwesomeIcon icon={faTrash} style={{color: "#b3bac7",}} />

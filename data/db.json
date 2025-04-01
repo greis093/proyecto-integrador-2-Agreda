@@ -165,6 +165,92 @@
           "cantidad": 3
         }
       ]
+    },
+    {
+      "id": "dd58",
+      "createAt": 1743472222877,
+      "carrito": [
+        {
+          "id": "3",
+          "nombre": "Ramo de Girasoles",
+          "stock": 6,
+          "foto": "/public/imgs/ramos-girasoles.webp",
+          "precio": "159",
+          "precio_antiguo": "179",
+          "detalles": "Ramo de 10 girasoles + tarjeta con dedicatoria.",
+          "categoria": [
+            "love",
+            "bouquet",
+            "box"
+          ],
+          "bouquet": true,
+          "box": true,
+          "love": true,
+          "graduacion": false,
+          "cantidad": 1
+        },
+        {
+          "id": "2",
+          "nombre": "Ramo de tulipanes premium",
+          "stock": 4,
+          "foto": "/public/imgs/tulipanes_colores_premium.webp",
+          "precio": "69",
+          "precio_antiguo": "79",
+          "detalles": "Ramo de 3 Tulipanes + tarjeta con dedicatoria.",
+          "categoria": [
+            "love",
+            "bouquet"
+          ],
+          "bouquet": true,
+          "box": false,
+          "love": true,
+          "graduacion": false,
+          "cantidad": 1
+        },
+        {
+          "id": "1",
+          "nombre": "Caja de 6 rosas premium",
+          "stock": "4",
+          "foto": "/public/imgs/caja_6_rosas_premium.webp",
+          "precio": "120",
+          "precio_antiguo": "400",
+          "detalles": "Caja con 6 rosas + tarjeta con dedicatoria",
+          "categoria": [
+            "box",
+            "love"
+          ],
+          "love": true,
+          "box": true,
+          "bouquet": false,
+          "graduacion": false,
+          "envio": false,
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "id": "b13f",
+      "createAt": 1743472684729,
+      "carrito": [
+        {
+          "id": "2",
+          "nombre": "Ramo de tulipanes premium",
+          "stock": 4,
+          "foto": "/public/imgs/tulipanes_colores_premium.webp",
+          "precio": "69",
+          "precio_antiguo": "79",
+          "detalles": "Ramo de 3 Tulipanes + tarjeta con dedicatoria.",
+          "categoria": [
+            "love",
+            "bouquet"
+          ],
+          "bouquet": true,
+          "box": false,
+          "love": true,
+          "graduacion": false,
+          "cantidad": 1
+        }
+      ]
     }
   ],
   "mensajes": [
