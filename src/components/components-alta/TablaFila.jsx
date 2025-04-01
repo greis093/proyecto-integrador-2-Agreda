@@ -51,7 +51,8 @@ const TablaFila = ({producto}) => {
       <td>{"S/"}{producto.precio_antiguo}</td>
       <td>{producto.stock}</td>
       <td >
-         {producto.categoria.map((c)=>(<span className="categoria_span">{ c }</span>))}
+        {producto.categoria}
+         {/* {producto.categoria.map((c)=>(<span className="categoria_span">{ c }</span>))} */} /* En nuestra base datos local es un objeto */
       </td>
       <td>
         <img className= "imagen_tabla" src={producto.foto} alt={producto.nombre} />
