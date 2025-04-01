@@ -47,7 +47,7 @@ const ItemCarrito = ({producto}) => {
        
     }
     const handleAgregar =(producto) =>{ 
-      //setcantCarrito(producto.precio)
+      
        agregarProductoAlCarritoContext(producto)
         
     }
@@ -84,7 +84,7 @@ const ItemCarrito = ({producto}) => {
        
         <td>{subtotal}</td>
         <td>
-        <button   onClick={() => handleVer(producto.id)}><FontAwesomeIcon icon={faEye} /></button>
+        <button style={{border: "none",}}  onClick={() => handleVer(producto.id)} ><FontAwesomeIcon icon={faEye } /></button>
         </td>
         <td>
             <div className="basurero"onClick={() => handleEliminar(producto.id)}>
