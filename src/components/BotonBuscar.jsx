@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import { useContext, useState } from 'react'
 import ProductosContext from "../contexts/ProductosContext"
+import { Link } from 'react-router'
 const BotonBuscar = () => {
   const {botonFiltrarNavbar} = useContext(ProductosContext)
   const [buscar, setBuscar] = useState({ filtro: '' });
@@ -21,17 +22,18 @@ const handleSubmit = (e) => {
       <input type="checkbox" id="buscar"/>
     <div  className="search_button">
       <div className="search_button__form-submit">
-    
       <input type="search" 
       id="busqueda" className="search_button__form-search"  
        name="filtro" 
        maxLength="25" 
        value={buscar.filtro}
        onChange={handleChange}
-      placeholder="Busca y descubre"/> 
-      <Link type="submit" onClick={handleSubmit} className="search_button__form-submit__buscar" to='/buscar'>
+      placeholder="Busca y descubre"/>
+      <Link to='/buscar'>
+      <button onClick={handleSubmit} className="search_button__form-submit__buscar">
         <FontAwesomeIcon icon={faMagnifyingGlass} />
-      </Link>
+      </button>
+      </Link> 
       </div>
     </div> 
     </>
