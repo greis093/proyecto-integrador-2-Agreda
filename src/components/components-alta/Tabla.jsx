@@ -21,13 +21,13 @@ const Tabla = () => {
                 <th>Acciones</th>
               </tr>
           </thead>
-      <div className="cuerpo_tabla">
-     { 
+      <tbody className="cuerpo_tabla">
+      <tr>{ 
         productos && productos.map((producto)=>(
            <TablaFila producto={producto} key={producto.id}/>
        ))
-        }
-      </div>
+        }</tr>
+      </tbody>
     </table>
     </div>
 
