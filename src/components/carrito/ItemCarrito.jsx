@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
+import './ItemCarrito.scss'
 import CarritoContext from '../../contexts/CarritoContext'
-import './itemCarrito.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faTrash,faEye} from '@fortawesome/free-solid-svg-icons'
 import Swal from "sweetalert2";
