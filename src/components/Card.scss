@@ -87,10 +87,11 @@
     @media screen and (min-width: 992px) {
         & { /* .card */
             width: 30vw;
-            height: auto;
+            height: 70vw;
             &__image {
                 object-fit:cover;
                 width: 30vw;
+                height: 60vw;
                }
             &__heading{
                 display: flex;
