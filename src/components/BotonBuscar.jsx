@@ -29,9 +29,9 @@ const handleSubmit = (e) => {
        value={buscar.filtro}
        onChange={handleChange}
       placeholder="Busca y descubre"/> 
-      <button type="submit" onClick={handleSubmit} className="search_button__form-submit__buscar">
+      <Link type="submit" onClick={handleSubmit} className="search_button__form-submit__buscar" to='/buscar'>
         <FontAwesomeIcon icon={faMagnifyingGlass} />
-      </button>
+      </Link>
       </div>
     </div> 
     </>

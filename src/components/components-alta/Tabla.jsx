@@ -22,11 +22,11 @@ const Tabla = () => {
               </tr>
           </thead>
       <tbody className="cuerpo_tabla">
-      <tr>{ 
+      { 
         productos && productos.map((producto)=>(
            <TablaFila producto={producto} key={producto.id}/>
        ))
-        }</tr>
+        }
       </tbody>
     </table>
     </div>
