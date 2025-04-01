@@ -45,14 +45,15 @@ const TablaFila = ({producto}) => {
     navigate(`/productos/detalle/${id}`)
   }
   return (
-    <>
+    <tr>
       <td>{producto.nombre}</td>
       <td>{"S/"}{producto.precio}</td>
       <td>{"S/"}{producto.precio_antiguo}</td>
       <td>{producto.stock}</td>
       <td >
-        {producto.categoria} /*Usamos este por mientras Netlifi   */
-         {/* {producto.categoria.map((c)=>(<span className="categoria_span">{ c }</span>))} */} /* En nuestra base datos local es un objeto */
+      {/*Usamos este por mientras Netlifi   */}
+        {producto.categoria} 
+         {/* {producto.categoria.map((c)=>(<span className="categoria_span">{ c }</span>))} */} {/* En nuestra base datos local es un objeto */}
       </td>
       <td>
         <img className= "imagen_tabla" src={producto.foto} alt={producto.nombre} />
@@ -63,7 +64,7 @@ const TablaFila = ({producto}) => {
         <button className="boton__editar" onClick={()=>handleEditar(producto)}>Editar</button>
         <button className="boton__borrar" onClick={()=>handleEliminar(producto.id)}>Borrar</button>
       </td>
-    </>
+    </tr>
   )
 }
 
