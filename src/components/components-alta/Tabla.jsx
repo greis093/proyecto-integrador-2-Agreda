@@ -11,14 +11,14 @@ const Tabla = () => {
         <table className="tabla-alta">
           <thead className="cabecera_tabla">
              <tr>
-                <th >Nombre</th>
-                <th>Precio</th>
-                <th>Precio antiguo</th>
-                <th>Stock</th>
-                <th>Categoría</th>
-                <th>Foto</th>
-                <th>Envío</th>
-                <th>Acciones</th>
+                <td >Nombre</td>
+                <td>Precio</td>
+                <td>Precio antiguo</td>
+                <td>Stock</td>
+                <td>Categoría</td>
+                <td>Foto</td>
+                <td>Envío</td>
+                <td>Acciones</td>
               </tr>
           </thead>
       <tbody className="cuerpo_tabla">
