@@ -52,7 +52,8 @@ const TablaFila = ({producto}) => {
       <td>{producto.stock}</td>
       <td >
       
-        {producto.categoria} 
+      {producto.categoria} 
+
         
       </td>
       <td>

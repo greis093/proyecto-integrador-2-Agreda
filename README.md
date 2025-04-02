@@ -2,7 +2,7 @@
 
 # Github: git@github.com:greis093/proyecto-integrador-2-Agreda.git
 
-# Netlify :
+# Netlify : https://integrador02.netlify.app/
 
 ## Pasos para crear un proyecto en REACT
 
@@ -62,7 +62,9 @@ touch .env .env.example netlify.toml
 
 ### EN .env COLOCO ESTA RUTA
 
-    VITE_BACKEND_PRODUCTOS=http://localhost:8080/productos/
+VITE_BACKEND_PRODUCTOS=http://localhost:8080/productos/
+VITE_BACKEND_MENSAJES=http://localhost:8080/mensajes/
+VITE_BACKEND_CARRITO=http://localhost:8080/carritos/
 
 ### EN .env.example COLOCAR ESTA RUTA
 

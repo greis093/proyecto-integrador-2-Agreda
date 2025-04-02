@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { peticionesHttp } from "../helpers/peticiones-http";
-
+import Swal from "sweetalert2";
 //! CREANDO CONTEXTO
 
 //! 1.Creamos el Context
@@ -94,6 +94,7 @@ const ProductosProvider = ({ children}) =>{
           );
      setProductosFiltrados(prodsFiltrados) 
     }
+
     const botonFiltrarNavbar= (palabras)=>{
         const palabrasSeparadas = palabras.toLowerCase().split(/\s+/);
         console.log("ffxx",productos)
@@ -109,6 +110,15 @@ const ProductosProvider = ({ children}) =>{
             // Verifica si el nombre incluye alguna palabra clave
             palabrasSeparadas.some(f => producto.detalles.toLowerCase().includes(f.toLowerCase()))
         );
+        if (filtro.length===0){
+            console.log("filtro esta entrando aqui",filtro)
+              Swal.fire({
+                      title: "No se encontro producto!",
+                      text: "Te mostramos nuestro catálogo",
+                      icon: "info"
+                    });
+        }
+            
         setProductosFiltrados(filtro);
         console.log(filtro)
     }

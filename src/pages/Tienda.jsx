@@ -12,7 +12,9 @@ const Tienda = () => {
 
   if (productosFiltrados.length === 0) {
     productosFiltrados = productos;
-  }
+
+          }
+
 
   return (
     <>

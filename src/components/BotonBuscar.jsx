@@ -3,19 +3,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import { useContext, useState } from 'react'
 import ProductosContext from "../contexts/ProductosContext"
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
+
+
 const BotonBuscar = () => {
+  const navigate = useNavigate()
   const {botonFiltrarNavbar} = useContext(ProductosContext)
   const [buscar, setBuscar] = useState({ filtro: '' });
+
   const handleChange =(e) =>{
     setBuscar({ filtro: e.target.value }); // Correcta actualización del estado
-  
+
 }
 
 const handleSubmit = (e) => {
   e.preventDefault(); // Evita el comportamiento por defecto del formulario
   console.log("Valor buscado:", buscar.filtro);
   botonFiltrarNavbar(buscar.filtro)
+  navigate(`/tienda`)
+
 };
   return (
     <>
