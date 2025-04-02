@@ -11,7 +11,7 @@ const ProductosDetalle = () => {
   const [productoDetalle, setProductoDetalle] = useState() // productoDetalle = {}
 
   useEffect(() => {
-    console.log("aqui")
+   
     getOne(id)
     
   },[])

@@ -51,7 +51,7 @@ const TablaFila = ({producto}) => {
       <td>{"S/"}{producto.precio_antiguo}</td>
       <td>{producto.stock}</td>
       <td >
-      {/*Usamos este por mientras Netlifi   */}
+      {/*Usamos este por mientras Netlify   */}
         {producto.categoria} 
          {/* {producto.categoria.map((c)=>(<span className="categoria_span">{ c }</span>))} */} {/* En nuestra base datos local es un objeto */}
       </td>
