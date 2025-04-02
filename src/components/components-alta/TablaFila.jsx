@@ -41,7 +41,7 @@ const TablaFila = ({producto}) => {
   }
 
   const handleVer = (id) => {
-    console.log(id)
+   
     navigate(`/productos/detalle/${id}`)
   }
   return (
