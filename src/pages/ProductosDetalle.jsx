@@ -58,7 +58,7 @@ const ProductosDetalle = () => {
               <p className="detalle_producto">El precio:</p> <div className="producto">{"S/"}{productoDetalle.precio}</div>
               <p className="detalle_producto">El precio antiguo:</p> <div className="producto">{"S/"}{productoDetalle.precio_antiguo}</div>
               <p className="detalle_producto">El detalle del producto:</p><div className="producto"> {productoDetalle.detalles}</div>
-              <p className="detalle_producto">La categoria del producto:</p><div className="producto"> {productoDetalle.categoria.map((c)=>(<span className="categoria_span">{ c }</span>))}</div>
+              <p className="detalle_producto">La categoria del producto:</p><div className="producto"> {productoDetalle.categoria}</div>
              <p className="detalle_producto"> La foto del producto:</p>
              <div className="contenedor_imagen">
              <img className="imagen_producto" src={productoDetalle.foto} alt={productoDetalle.nombre}/>
